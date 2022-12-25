@@ -3,7 +3,6 @@ package com.isj.gestiondenote.ClientWeb.Model.entities;
  * importation des classes
  */
 
-import com.isj.gestiondenote.ClientWeb.enumération.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -20,6 +19,13 @@ import java.util.Objects;
 
 public class Personne extends Securite {
 
+
+    public enum Sexe {
+        MASCULIN, FEMININ
+    }
+    public enum Statut {
+        ACTIVE, NONACTIVE
+    }
 
     private String nom;
 

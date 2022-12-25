@@ -6,7 +6,6 @@ package com.isj.gestiondenote.ClientWeb.Model.entities;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import com.isj.gestiondenote.ClientWeb.enumération.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,7 +29,12 @@ import java.util.Objects;
 @AllArgsConstructor
 public class Utilisateur extends Personne implements Serializable {
 
-
+    public enum Sexe {
+        MASCULIN, FEMININ
+    }
+    public enum Statut {
+        ACTIVE, NONACTIVE
+    }
 
     private String login;
 
@@ -41,7 +45,7 @@ public class Utilisateur extends Personne implements Serializable {
     private List<Role> roles = new ArrayList<>();
 
     public Utilisateur(String libelle, String description, String nom, String prenom, String email, String telephone, Date dateNaissance, Sexe sexe, Statut statut, String login, String motDePasse) {
-        super(libelle, description, nom, prenom, email, telephone, dateNaissance, sexe, statut);
+        //super(libelle, description, nom, prenom, email, telephone, dateNaissance, sexe, statut);
         this.login = login;
         this.motDePasse = motDePasse;
     }

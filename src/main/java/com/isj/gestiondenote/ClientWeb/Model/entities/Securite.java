@@ -8,7 +8,6 @@ package com.isj.gestiondenote.ClientWeb.Model.entities;
 import lombok.Data;
 
 import java.util.Date;
-import com.isj.gestiondenote.ClientWeb.enumération.*;
 /**
  * cette classe est une superclasse à partir de laquelle héritent toutes les classes du projet
  *
@@ -17,6 +16,11 @@ import com.isj.gestiondenote.ClientWeb.enumération.*;
 @Data
 
 public class Securite {
+
+    public enum StatutVie {
+        ATTENTE, ACTIVE, CLOTUREE
+    }
+
 
     private Long code= Long.valueOf(0);
 

@@ -5,7 +5,6 @@ package com.isj.gestiondenote.ClientWeb.Model.entities;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import com.isj.gestiondenote.ClientWeb.enumération.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -9,7 +9,6 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.isj.gestiondenote.ClientWeb.enumération.*;
 
 import java.io.Serializable;
 import java.util.Date;

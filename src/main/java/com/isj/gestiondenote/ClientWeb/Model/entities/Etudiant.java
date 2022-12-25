@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
-import com.isj.gestiondenote.ClientWeb.enumération.*;
+import com.isj.gestiondenote.ClientWeb.Model.enumération.*;
 /**
  * cette classe crée la table etudiant dans la base de données
  * cette classe herite de la classe CandidatController
