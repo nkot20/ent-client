@@ -26,7 +26,7 @@ import java.util.List;
 @Slf4j
 @Controller
 public class UserController {
-    @GetMapping("/login")
+    @GetMapping("/")
     public String pageConnexionForm(Model model){
         model.addAttribute("user", new UserDto());
         return "login";
