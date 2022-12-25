@@ -3,13 +3,13 @@
 
   <head>
     <!-- Required meta tags -->
-      <th:block th:replace="Fragments/_head.html::head"></th:block>
+      <th:block th:replace="fragments/_head.html::head"></th:block>
   </head>
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
       <header>
-          <th:block th:replace="Fragments/_header.html::header"></th:block>
+          <th:block th:replace="fragments/_header.html::header"></th:block>
       </header>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
@@ -34,7 +34,7 @@
       </div>
       <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
-        <th:block th:replace="Fragments/_navNotes.html::navNotes"></th:block>
+        <th:block th:replace="fragments/_navNotes.html::navNotes"></th:block>
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
@@ -136,12 +136,12 @@
 
    <!-- Modals modalnotes-->
 
-          <th:block th:replace="Fragments/_modalsNotes.html::modalsNotes"></th:block>
+          <th:block th:replace="fragments/_modalsNotes.html::modalsNotes"></th:block>
   <!-- End Modals modalnotes -->
 
         <!-- partial:partials/_footer.html -->
          <footer class="footer">
-             <th:block th:replace="Fragments/_footer.html::footer"></th:block>
+             <th:block th:replace="fragments/_footer.html::footer"></th:block>
          </footer>
         <!-- partial -->
       </div>
@@ -152,7 +152,7 @@
   <!-- container-scroller -->
 
   <!-- plugins:js -->
-  <th:block th:replace="Fragments/_js.html::js"></th:block>
+  <th:block th:replace="fragments/_js.html::js"></th:block>
   <!--End custom js for this page-->
 </body>
 

@@ -2,17 +2,17 @@
 <html lang="en" html xmlns:th="http://www.thymeleaf.org">
 
   <head>
-    <th:block th:replace="Fragments/_head.html::head"></th:block>
+    <th:block th:replace="fragments/_head.html::head"></th:block>
   </head>
 
 <body>
 
 <header>
-  <th:block th:replace="Fragments/_header.html::header"></th:block>
+  <th:block th:replace="fragments/_header.html::header"></th:block>
 </header>
 <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
-  <th:block th:replace="Fragments/_navNotes.html::navNotes"></th:block>
+  <th:block th:replace="fragments/_navNotes.html::navNotes"></th:block>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_settings-panel.html -->
@@ -85,12 +85,12 @@
             </div>
         <!-- content-wrapper ends -->
          <!-- Modal for modalnotes  -->
-        <th:block th:replace="Fragments/_modalsNotes.html::modalsNotes"></th:block>
+        <th:block th:replace="fragments/_modalsNotes.html::modalsNotes"></th:block>
   <!-- End Modal for modalnotes  -->
 
         <!-- partial:partials/_footer.html -->
         <footer id="footer" class="footer">
-          <th:block th:replace="Fragments/_footer.html::footer"></th:block>
+          <th:block th:replace="fragments/_footer.html::footer"></th:block>
         </footer><!-- End Footer -->
         <!-- partial -->
       </div>
