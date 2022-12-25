@@ -16,7 +16,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
 import java.net.URI;
@@ -26,10 +28,12 @@ import java.util.List;
 @Slf4j
 @Controller
 public class UserController {
-    @GetMapping("/")
-    public String pageConnexionForm(Model model){
+    @RequestMapping(value = {"/"})
+    public ModelAndView pageConnexionForm(Model model){
+        final ModelAndView modelAndView = new ModelAndView();
         model.addAttribute("user", new UserDto());
-        return "login";
+        modelAndView.setViewName("login");
+        return modelAndView;
     }
 
     @PostMapping("/connexion")
