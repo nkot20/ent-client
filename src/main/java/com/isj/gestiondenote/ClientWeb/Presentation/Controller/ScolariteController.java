@@ -106,7 +106,7 @@ public class ScolariteController {
     @PostMapping("/Imprimercarte")
     public ResponseEntity<?> ImprimerCartEtudiant(@ModelAttribute CarteEtudiant carteEtudiant, Model model, HttpSession session) throws URISyntaxException {
         //carteEtudiant.setCodeUser("fhjhh");
-        carteEtudiant.setCodeUser(session.getAttribute("matricule").toString());
+        //carteEtudiant.setCodeUser(session.getAttribute("matricule").toString());
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.set("Authorization", session.getValue("accessToken").toString());

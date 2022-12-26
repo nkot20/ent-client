@@ -55,12 +55,14 @@ public class UserController {
 
     @PostMapping("/login")
     public String login(Model model, @ModelAttribute UserDto userDto , HttpSession session) throws URISyntaxException {
+        System.out.println("yes");
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<UserDto> httpEntity = new HttpEntity<>(userDto, headers);
         RestTemplate restTemplate = new RestTemplate();
         UserResponseDto userResponseDto= new UserResponseDto();
         userResponseDto = restTemplate.postForObject(new URI(URL.BASE_URL_AUTH+"/user/login"),httpEntity, UserResponseDto.class);
+        System.out.println(userResponseDto.getMatricule());
         session.setAttribute("email",userResponseDto.getUsername());
         session.setAttribute("matricule",userResponseDto.getMatricule());
         session.setAttribute("filiere",userResponseDto.getFiliere());
