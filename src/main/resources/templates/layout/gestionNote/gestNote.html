@@ -36,7 +36,7 @@
       </div>
       <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
-      <th:block th:replace="fragments/_navNotes.html::navNotes"></th:block>
+      <th:block th:replace="Fragments/_navNotes.html::navNotes"></th:block>
 
       <!-- partial -->
       <div class="main-panel">
@@ -50,8 +50,8 @@
                 </div>
               </div>
             </div>
-          </div>     
-           <div class="row">
+          </div>
+          <div class="row">
             <div class="col-md-4 grid-margin stretch-card">
               <div class="card tale-bg">
                 <div class="card-people mt-auto" width="20px">
@@ -70,7 +70,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 grid-margin transparent">
+            <div class="col-md-6 grid-margin transparent"  th:if="${session.authorithies[0].authority =='Admin' }">
               <div class="row">
                 <div class="col-md-6 mb-4 stretch-card transparent">
                   <div class="card card-tale">
@@ -89,48 +89,107 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
-                  <div class="card card-light-blue">
-                    <div class="card-body">
-                      <p class="mb-4">Number of Meetings</p>
-                      <p class="fs-30 mb-2">34040</p>
-                      <p>2.00% (30 days)</p>
-                    </div>
+            </div>
+            <div class="col-md-5 grid-margin stretch-card" th:if="${session.authorithies[0].authority =='Etudiant' }">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">To Do Lists</h4>
+                  <div class="list-wrapper pt-2">
+                    <ul class="d-flex flex-column-reverse todo-list todo-list-custom">
+                      <li>
+                        <div class="form-check form-check-flat">
+                          <label class="form-check-label">
+                            <input class="checkbox" type="checkbox">
+                            Meeting with Urban Team
+                          </label>
+                        </div>
+                        <i class="remove ti-close"></i>
+                      </li>
+                      <li class="completed">
+                        <div class="form-check form-check-flat">
+                          <label class="form-check-label">
+                            <input class="checkbox" type="checkbox" checked>
+                            Duplicate a project for new customer
+                          </label>
+                        </div>
+                        <i class="remove ti-close"></i>
+                      </li>
+                      <li>
+                        <div class="form-check form-check-flat">
+                          <label class="form-check-label">
+                            <input class="checkbox" type="checkbox">
+                            Project meeting with CEO
+                          </label>
+                        </div>
+                        <i class="remove ti-close"></i>
+                      </li>
+                      <li class="completed">
+                        <div class="form-check form-check-flat">
+                          <label class="form-check-label">
+                            <input class="checkbox" type="checkbox" checked>
+                            Follow up of team zilla
+                          </label>
+                        </div>
+                        <i class="remove ti-close"></i>
+                      </li>
+                      <li>
+                        <div class="form-check form-check-flat">
+                          <label class="form-check-label">
+                            <input class="checkbox" type="checkbox">
+                            Level up for Antony
+                          </label>
+                        </div>
+                        <i class="remove ti-close"></i>
+                      </li>
+                    </ul>
                   </div>
-                </div>
-                <div class="col-md-6 stretch-card transparent">
-                  <div class="card card-light-danger">
-                    <div class="card-body">
-                      <p class="mb-4">Number of Clients</p>
-                      <p class="fs-30 mb-2">47033</p>
-                      <p>0.22% (30 days)</p>
-                    </div>
+                  <div class="add-items d-flex mb-0 mt-2">
+                    <input type="text" class="form-control todo-list-input"  placeholder="Add new task">
+                    <button class="add btn btn-icon text-primary todo-list-add-btn bg-transparent"><i class="icon-circle-plus"></i></button>
                   </div>
                 </div>
               </div>
             </div>
-            
+            <!--              <div class="row">-->
+            <!--                <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">-->
+            <!--                  <div class="card card-light-blue">-->
+            <!--                    <div class="card-body">-->
+            <!--                      <p class="mb-4">Number of Meetings</p>-->
+            <!--                      <p class="fs-30 mb-2">34040</p>-->
+            <!--                      <p>2.00% (30 days)</p>-->
+            <!--                    </div>-->
+            <!--                  </div>-->
+            <!--                </div>-->
+            <!--                <div class="col-md-6 stretch-card transparent">-->
+            <!--                  <div class="card card-light-danger">-->
+            <!--                    <div class="card-body">-->
+            <!--                      <p class="mb-4">Number of Clients</p>-->
+            <!--                      <p class="fs-30 mb-2">47033</p>-->
+            <!--                      <p>0.22% (30 days)</p>-->
+            <!--                    </div>-->
+            <!--                  </div>-->
+            <!--                </div>-->
+            <!--              </div>-->
           </div>
-                   
+
+        </div>
+
         <!-- content-wrapper ends -->
 
 
 
-         <!-- Modal for modlanotes  -->
-          <th:block th:replace="fragments/_modalsNotes.html::modalsNotes"></th:block>
+        <!-- Modal for modlanotes  -->
+        <th:block th:replace="fragments/_modalsNotes.html::modalsNotes"></th:block>
 
-<!-- End Modal for  moadlnotes  -->
+        <!-- End Modal for  moadlnotes  -->
 
         <!-- partial:partials/_footer.html -->
-          <footer class="footer">
-            <th:block th:replace="fragments/_footer.html::footer"></th:block>
-          </footer>
-          <!-- partial -->
-        </div>
-        <!-- main-panel ends -->
+        <footer class="footer">
+          <th:block th:replace="fragments/_footer.html::footer"></th:block>
+        </footer>
+        <!-- partial -->
       </div>
-      <!-- page-body-wrapper ends -->
+      <!-- main-panel ends -->
     </div>
     <!-- container-scroller -->
 
